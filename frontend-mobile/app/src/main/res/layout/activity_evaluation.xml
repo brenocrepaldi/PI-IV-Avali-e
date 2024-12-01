@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#18171c"
+    tools:context=".EvaluationActivity">
+
+    <View
+        android:id="@+id/topBackground"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:background="@drawable/header_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/EvaluationText"
+        android:layout_width="136dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="14dp"
+        android:text="Avaliação"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintStart_toEndOf="@+id/AvalieLogo"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RatingBar
+        android:id="@+id/GeneralRatingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="168dp"
+        android:numStars="5"
+        android:progressBackgroundTint="#27262b"
+        android:progressTint="#0da7e7"
+        android:rating="2"
+        android:stepSize="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/SubmitButton"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="124dp"
+        android:background="@drawable/btn_color"
+        android:text="Submit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EvaluationMultiText" />
+
+    <EditText
+        android:id="@+id/EvaluationMultiText"
+        android:layout_width="257dp"
+        android:layout_height="209dp"
+        android:layout_marginTop="92dp"
+        android:background="@drawable/username_text"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="Digite seu Comentario"
+        android:inputType="textMultiLine"
+        android:maxLength="200"
+        android:overScrollMode="always"
+        android:paddingStart="45dp"
+        android:paddingTop="34dp"
+        android:scrollbars="vertical"
+        android:scrollHorizontally="false"
+        android:textColor="@color/white"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/GeneralRatingBar" />
+
+    <ImageView
+        android:id="@+id/AvalieLogo"
+        android:layout_width="64dp"
+        android:layout_height="106dp"
+        android:layout_marginBottom="760dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/home_logo" />
+
+    <TextView
+        android:id="@+id/RatingText"
+        android:layout_width="222dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="67dp"
+        android:text="Avaliacao Geral da Aula"
+        android:textColor="@color/white"
+        android:textSize="19sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topBackground" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
